@@ -1,38 +1,37 @@
-# To-Do List Interativa
+# Gerador de Senhas em Python 🔐
 
-## Sobre o Projeto
+## Sobre o Projeto 💡
 
-Este é um projeto simples e funcional de uma "To-Do List", desenvolvido com HTML, CSS e JavaScript. Ele demonstra minhas habilidades no desenvolvimento front-end, incluindo:
+Este é um projeto simples, porém prático, que gera senhas aleatórias e seguras. Ele foi desenvolvido como parte do meu portfólio para demonstrar habilidades básicas de programação em Python, incluindo:
 
-* **HTML**: Estrutura e semântica da página.
-* **CSS**: Estilização e design responsivo, tornando a aplicação visualmente agradável.
-* **JavaScript**: Manipulação do DOM (Document Object Model) para adicionar, marcar como concluído e remover tarefas dinamicamente.
+* 💻 Uso de módulos padrão (`random`, `string`).
+* 📝 Definição e chamada de funções com parâmetros.
+* ⌨️ Interação com o usuário via linha de comando.
+* ✅ Tratamento de erros (`try-except`).
 
-Este projeto é uma ótima maneira de ver a integração das três tecnologias para criar uma aplicação interativa e útil.
+O projeto permite que o usuário defina o comprimento da senha e escolha quais tipos de caracteres (letras maiúsculas, números, símbolos) deseja incluir.
 
-## Funcionalidades
-
-* **Adicionar Tarefa**: Digite uma tarefa na caixa de texto e clique em "Adicionar" ou pressione Enter.
-* **Marcar como Concluída**: Clique no texto da tarefa para riscá-la, indicando que foi concluída.
-* **Remover Tarefa**: Clique no botão "Remover" para deletar a tarefa da lista.
-
-## Como Usar
+## Como Usar 🚀
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/matteusdeveloper/to-do-list-js.git](https://github.com/matteusdeveloper/to-do-list-js.git)
-    cd to-do-list-js
+    git clone [https://github.com/matteusdeveloper/password-generator-python.git](https://github.com/matteusdeveloper/password-generator-python.git)
+    cd password-generator-python
     ```
-2.  Abra o arquivo `index.html` diretamente no seu navegador. Não é necessário servidor.
 
-## Tecnologias Utilizadas
+2.  **Execute o script:**
+    ```bash
+    python password_generator.py
+    ```
 
-* **HTML5**
-* **CSS3**
-* **JavaScript (ES6)**
+3.  Siga as instruções na tela para personalizar sua senha.
 
-## Autor
+## Tecnologias Utilizadas 🛠️
 
-**Matheus de Andrade**
+* **Python 3**
+
+## Autor ✨
+
+**MatteusDeveloper**
 
 [Perfil do GitHub](https://github.com/matteusdeveloper)
