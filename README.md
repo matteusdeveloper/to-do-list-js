@@ -1,37 +1,79 @@
-# Gerador de Senhas em Python 🔐
+📌 Descrição do Projeto
 
-## Sobre o Projeto 💡
+Este projeto consiste em uma aplicação de lista de tarefas (To-Do List) desenvolvida com JavaScript puro, que permite ao usuário adicionar, visualizar, marcar como concluídas e remover tarefas de forma dinâmica.
 
-Este é um projeto simples, porém prático, que gera senhas aleatórias e seguras. Ele foi desenvolvido como parte do meu portfólio para demonstrar habilidades básicas de programação em Python, incluindo:
+A aplicação utiliza manipulação do DOM para atualizar a interface em tempo real, sem necessidade de recarregar a página.
 
-* 💻 Uso de módulos padrão (`random`, `string`).
-* 📝 Definição e chamada de funções com parâmetros.
-* ⌨️ Interação com o usuário via linha de comando.
-* ✅ Tratamento de erros (`try-except`).
+⚙️ Como funciona
+1. Adição de tarefas
 
-O projeto permite que o usuário defina o comprimento da senha e escolha quais tipos de caracteres (letras maiúsculas, números, símbolos) deseja incluir.
+O usuário digita uma tarefa em um campo de entrada e clica em um botão (ou pressiona Enter).
+O JavaScript captura esse valor e cria um novo elemento na lista.
 
-## Como Usar 🚀
+function adicionarTarefa() {
+  const input = document.getElementById("input-tarefa");
+  const texto = input.value;
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone [https://github.com/matteusdeveloper/password-generator-python.git](https://github.com/matteusdeveloper/password-generator-python.git)
-    cd password-generator-python
-    ```
+  if (texto.trim() !== "") {
+    const li = document.createElement("li");
+    li.textContent = texto;
 
-2.  **Execute o script:**
-    ```bash
-    python password_generator.py
-    ```
+    document.getElementById("lista").appendChild(li);
+    input.value = "";
+  }
+}
+2. Manipulação do DOM
 
-3.  Siga as instruções na tela para personalizar sua senha.
+O JavaScript interage diretamente com o HTML usando métodos como:
 
-## Tecnologias Utilizadas 🛠️
+getElementById
+createElement
+appendChild
+addEventListener
 
-* **Python 3**
+Isso permite criar, alterar e remover elementos dinamicamente.
 
-## Autor ✨
+3. Marcar tarefa como concluída
 
-**MatteusDeveloper**
+Ao clicar em uma tarefa, ela pode ser marcada como concluída (geralmente com um risco no texto).
 
-[Perfil do GitHub](https://github.com/matteusdeveloper)
+li.addEventListener("click", () => {
+  li.classList.toggle("concluida");
+});
+4. Remoção de tarefas
+
+Cada tarefa pode ter um botão de exclusão.
+
+const btnRemover = document.createElement("button");
+btnRemover.textContent = "Remover";
+
+btnRemover.addEventListener("click", () => {
+  li.remove();
+});
+
+li.appendChild(btnRemover);
+5. Persistência de dados (opcional, mas importante)
+
+Para salvar as tarefas mesmo após atualizar a página, utiliza-se o Local Storage:
+
+localStorage.setItem("tarefas", JSON.stringify(listaDeTarefas));
+
+E para recuperar:
+
+const tarefas = JSON.parse(localStorage.getItem("tarefas"));
+🚀 Funcionalidades
+✅ Adicionar tarefas
+✅ Marcar como concluída
+✅ Remover tarefas
+✅ Armazenamento local (Local Storage)
+✅ Interface dinâmica sem recarregamento
+🧠 Conceitos utilizados
+Manipulação do DOM
+Eventos (Event Listeners)
+Estruturas de dados (arrays/objetos)
+JSON (para armazenamento)
+Local Storage
+📦 Tecnologias
+HTML5
+CSS3
+JavaScript (Vanilla JS)
