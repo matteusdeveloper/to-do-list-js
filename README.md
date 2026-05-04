@@ -1,15 +1,27 @@
-📌 Descrição do Projeto
+# 📌 To-Do List em JavaScript
 
-Este projeto consiste em uma aplicação de lista de tarefas (To-Do List) desenvolvida com JavaScript puro, que permite ao usuário adicionar, visualizar, marcar como concluídas e remover tarefas de forma dinâmica.
+Uma aplicação simples de lista de tarefas (**To-Do List**) desenvolvida com **JavaScript puro (Vanilla JS)**, permitindo adicionar, concluir e remover tarefas de forma dinâmica, sem recarregar a página.
 
-A aplicação utiliza manipulação do DOM para atualizar a interface em tempo real, sem necessidade de recarregar a página.
+---
 
-⚙️ Como funciona
-1. Adição de tarefas
+## 🚀 Funcionalidades
 
-O usuário digita uma tarefa em um campo de entrada e clica em um botão (ou pressiona Enter).
-O JavaScript captura esse valor e cria um novo elemento na lista.
+* Adicionar novas tarefas
+* Marcar tarefas como concluídas
+* Remover tarefas
+* Atualização dinâmica da interface
+* Armazenamento local com Local Storage
 
+---
+
+## ⚙️ Como funciona
+
+### ➕ Adicionar tarefas
+
+O usuário digita uma tarefa em um campo de entrada e a adiciona à lista.
+O JavaScript cria dinamicamente um novo elemento HTML.
+
+```javascript
 function adicionarTarefa() {
   const input = document.getElementById("input-tarefa");
   const texto = input.value;
@@ -22,28 +34,36 @@ function adicionarTarefa() {
     input.value = "";
   }
 }
-2. Manipulação do DOM
+```
 
-O JavaScript interage diretamente com o HTML usando métodos como:
+---
 
-getElementById
-createElement
-appendChild
-addEventListener
+### 🧠 Manipulação do DOM
 
-Isso permite criar, alterar e remover elementos dinamicamente.
+A aplicação utiliza métodos como:
 
-3. Marcar tarefa como concluída
+* `getElementById`
+* `createElement`
+* `appendChild`
+* `addEventListener`
 
-Ao clicar em uma tarefa, ela pode ser marcada como concluída (geralmente com um risco no texto).
+Para atualizar a interface em tempo real.
 
+---
+
+### ✔️ Marcar como concluída
+
+```javascript
 li.addEventListener("click", () => {
   li.classList.toggle("concluida");
 });
-4. Remoção de tarefas
+```
 
-Cada tarefa pode ter um botão de exclusão.
+---
 
+### 🗑️ Remover tarefas
+
+```javascript
 const btnRemover = document.createElement("button");
 btnRemover.textContent = "Remover";
 
@@ -52,28 +72,46 @@ btnRemover.addEventListener("click", () => {
 });
 
 li.appendChild(btnRemover);
-5. Persistência de dados (opcional, mas importante)
+```
 
-Para salvar as tarefas mesmo após atualizar a página, utiliza-se o Local Storage:
+---
 
+### 💾 Persistência com Local Storage
+
+```javascript
 localStorage.setItem("tarefas", JSON.stringify(listaDeTarefas));
+```
 
-E para recuperar:
-
+```javascript
 const tarefas = JSON.parse(localStorage.getItem("tarefas"));
-🚀 Funcionalidades
-✅ Adicionar tarefas
-✅ Marcar como concluída
-✅ Remover tarefas
-✅ Armazenamento local (Local Storage)
-✅ Interface dinâmica sem recarregamento
-🧠 Conceitos utilizados
-Manipulação do DOM
-Eventos (Event Listeners)
-Estruturas de dados (arrays/objetos)
-JSON (para armazenamento)
-Local Storage
-📦 Tecnologias
-HTML5
-CSS3
-JavaScript (Vanilla JS)
+```
+
+---
+
+## 🧠 Conceitos utilizados
+
+* Manipulação do DOM
+* Eventos (Event Listeners)
+* Arrays e Objetos
+* JSON
+* Local Storage
+
+---
+
+## 🛠️ Tecnologias
+
+* HTML5
+* CSS3
+* JavaScript
+
+---
+
+## 📷 Preview
+
+*(adicione aqui um print do projeto depois)*
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT.
